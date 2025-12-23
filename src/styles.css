@@ -1,0 +1,154 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #0b0f14;
+  border-right: 1px solid #1f242b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.sidebar .vault-path {
+  font-size: 12px;
+  color: #9da7b3;
+}
+
+.sidebar .section-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b7785;
+  margin-top: 8px;
+}
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.note-list button {
+  background: #131a22;
+  border: 1px solid #1f2933;
+  color: #e6edf3;
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.note-list button.active {
+  background: #1c2630;
+  border-color: #3b82f6;
+}
+
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-bottom: 1px solid #1f242b;
+  background: #0f141b;
+}
+
+.app-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.editor-shell {
+  padding: 24px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-toolbar button {
+  background: #1f2933;
+  color: #e6edf3;
+  border: 1px solid #2a3440;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.editor-toolbar .status-pill {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #111827;
+  color: #9ca3af;
+  border: 1px solid #1f2933;
+}
+
+.editor-surface {
+  background: #0f141b;
+  border: 1px solid #1f242b;
+  border-radius: 16px;
+  padding: 18px 20px;
+  min-height: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.editor-surface .ProseMirror {
+  outline: none;
+  min-height: 360px;
+}
+
+.editor-surface .ProseMirror h1,
+.editor-surface .ProseMirror h2,
+.editor-surface .ProseMirror h3 {
+  color: #f8fafc;
+}
+
+.editor-surface .ProseMirror p,
+.editor-surface .ProseMirror li {
+  color: #d0d7de;
+  line-height: 1.6;
+}
+
+.editor-surface .ProseMirror a {
+  color: #60a5fa;
+}
