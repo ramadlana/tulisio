@@ -42,6 +42,20 @@ See `examples/MyNotesVault/.appconfig/settings.json`.
 
 ## Development
 
+### Prerequisites
+
+- Install Rust (cargo is required by Tauri):
+
+  ```bash
+  brew install rustup-init && rustup-init -y
+  ```
+
+- Install Xcode Command Line Tools (for macOS builds):
+
+  ```bash
+  xcode-select --install
+  ```
+
 ### Run in dev mode (Terminal or VS Code)
 
 1. Install dependencies:
