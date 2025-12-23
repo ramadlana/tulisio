@@ -1,0 +1,7 @@
+{
+  "vaultPath": "/Users/USER/Documents/MyNotesVault",
+  "notesFolder": "notes",
+  "assetsFolder": "assets",
+  "namingStrategy": "uuid",
+  "autoCleanupAssets": true
+}
