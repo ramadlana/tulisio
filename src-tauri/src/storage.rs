@@ -23,6 +23,7 @@ pub struct Settings {
 
 #[derive(Debug)]
 pub struct NoteContext {
+    pub note_path: PathBuf,
     pub assets_dir: PathBuf,
     pub assets_dir_relative: PathBuf,
 }
@@ -56,6 +57,7 @@ pub fn resolve_note_context(settings: &Settings, note_path: &str) -> Result<Note
     let assets_dir = Path::new(&settings.vault_path).join(&assets_dir_relative);
 
     Ok(NoteContext {
+        note_path,
         assets_dir,
         assets_dir_relative,
     })

@@ -171,11 +171,11 @@ export function NoteEditor({ initialMarkdown, notePath, settings }: NoteEditorPr
 
   const toolbar = useMemo(() => {
     return (
-      <div style={{ display: "flex", gap: "8px", marginBottom: "12px" }}>
+      <div className="editor-toolbar">
         <button type="button" onClick={handleAttachClick}>
           Attach File
         </button>
-        <span>{status}</span>
+        <span className="status-pill">{status}</span>
       </div>
     );
   }, [status]);
@@ -183,15 +183,7 @@ export function NoteEditor({ initialMarkdown, notePath, settings }: NoteEditorPr
   return (
     <section>
       {toolbar}
-      <div
-        style={{
-          border: "1px solid #e5e5e5",
-          borderRadius: "8px",
-          padding: "12px",
-          minHeight: "360px"
-        }}
-        onClick={handleOpenLink}
-      >
+      <div className="editor-surface" onClick={handleOpenLink}>
         <EditorContent editor={editor} />
       </div>
     </section>

@@ -1,8 +1,6 @@
 use std::collections::HashSet;
 use std::path::{Path, PathBuf};
 
-use base64::engine::general_purpose::STANDARD;
-use base64::Engine;
 use serde::{Deserialize, Serialize};
 
 use crate::markdown::extract_asset_paths;
@@ -91,9 +89,7 @@ pub fn save_image(request: SaveImageRequest) -> Result<SaveImageResponse, String
 
     let file_name = unique_asset_name("img", &request.extension);
     let file_path = context.assets_dir.join(&file_name);
-    let image_bytes = STANDARD
-        .decode(&request.base64)
-        .map_err(|err| err.to_string())?;
+    let image_bytes = base64::decode(&request.base64).map_err(|err| err.to_string())?;
 
     std::fs::write(&file_path, image_bytes).map_err(|err| err.to_string())?;
 
@@ -118,9 +114,7 @@ pub fn save_attachment(request: SaveAttachmentRequest) -> Result<SaveAttachmentR
     let destination = context.assets_dir.join(&file_name);
 
     ensure_parent_dir(&destination).map_err(|err| err.to_string())?;
-    let bytes = STANDARD
-        .decode(&request.base64)
-        .map_err(|err| err.to_string())?;
+    let bytes = base64::decode(&request.base64).map_err(|err| err.to_string())?;
     std::fs::write(&destination, bytes).map_err(|err| err.to_string())?;
 
     let relative_path = normalize_relative_path(&context.assets_dir_relative.join(file_name));
