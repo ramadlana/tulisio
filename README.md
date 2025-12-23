@@ -39,3 +39,35 @@ MyNotesVault/
 ## Example settings
 
 See `examples/MyNotesVault/.appconfig/settings.json`.
+
+## Development
+
+### Run in dev mode (Terminal or VS Code)
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Start the Tauri dev app (from Terminal or VS Code integrated terminal):
+
+   ```bash
+   npm run tauri dev
+   ```
+
+### Build a macOS Apple Silicon app
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Build the production app bundle:
+
+   ```bash
+   npm run tauri build
+   ```
+
+The built `.app` bundle will be located in `src-tauri/target/release/bundle/macos/`.
