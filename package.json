@@ -13,7 +13,7 @@
     "@tauri-apps/api": "^1.5.0",
     "@tiptap/extension-image": "^2.2.4",
     "@tiptap/extension-link": "^2.2.4",
-    "@tiptap/extension-markdown": "^2.2.4",
+    "@tiptap/markdown": "^2.2.4",
     "@tiptap/react": "^2.2.4",
     "@tiptap/starter-kit": "^2.2.4",
     "react": "^18.2.0",

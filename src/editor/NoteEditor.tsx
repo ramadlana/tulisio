@@ -3,7 +3,7 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Link from "@tiptap/extension-link";
 import Image from "@tiptap/extension-image";
-import Markdown from "@tiptap/extension-markdown";
+import { Markdown } from "@tiptap/markdown";
 import { invoke } from "@tauri-apps/api/tauri";
 import type { Settings } from "../config/settings";
 
